@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Low Delay Compilation System</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Cryptocurrency Landing Page Template">
+	<meta name="keywords" content="cryptocurrency, unica, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="{% static 'img/favicon.ico' %}" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="{% static 'https://fonts.googleapis.com/css?family=Lato' %}" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/themify-icons.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section clearfix">
+		<div class="container-fluid">
+			<a href="{% static 'index.html' %}" class="site-logo">
+				<img src="static/img/eye.jpg" alt="">
+			</a>
+			<div class="responsive-bar"><i class="fa fa-bars"></i></div>
+			<nav class="main-menu">
+				<ul class="menu-list">
+					<!--<li><a href="">News</a></li>-->
+					<li><a href="">About</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+
+	<!-- Hero section -->
+	<section class="hero-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 hero-text">
+					<h2>Lets <span>Compile</h2>
+					<table class="hero-subscribe-from">
+						<form class="hero-subscribe-from">
+							<tr>
+								<th><input  type="text" placeholder="Select file to compile" disabled></th>
+								<!-- <th><input  type="file" class="site-btn sb-gradients" value="Browse"></th> -->
+								<!-- <th><input id="fileInput" type="file"> -->
+									<th><input id="fileInput" type="file" value="Browse" class="site-btn sb-gradients" onclick="home.getElementById('fileInput').click();"></th>
+									<!-- <button class="site-btn sb-gradients" onclick="document.getElementById('fileInput').click();">Browse</button> -->
+								</th>
+							</tr>
+
+							<tr>
+								<th><input type="number" placeholder="Number of PCs to run compiler	"></th>		
+							</tr>
+						</form>
+					</table>
+					<h2>Select libraries</h2>
+					<table class="hero-subscribe-from">
+							<form class="hero-subscribe-from">
+								<tr>
+									<th><input type="text" placeholder="Select a library" disabled></th>
+									<th><button type="file" class="site-btn sb-gradients">Browse</button></th>
+									
+								</tr>
+	
+								<tr>
+										<th><input type="text" placeholder="Select a library" disabled></th>
+										<th><button class="site-btn sb-gradients">Browse</button></th>		
+								</tr>
+
+								<tr>
+										<th><input type="text" placeholder="Select a library" disabled></th>
+										<th><button class="site-btn sb-gradients">Browse</button></th>		
+								</tr>
+							</form>
+						</table>
+				</div>
+				<!--<div class="col-md-6">
+					<img src="img/laptop.png" class="laptop-image" alt="">
+				</div>-->
+			</div>
+		</div>
+	</section>
+	<!-- Hero section end -->
+
+	<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">
+			<div class="footer-bottom">
+				<div class="row">
+					<!--<div class="col-lg-4 store-links text-center text-lg-left pb-3 pb-lg-0">
+						<a href=""><img src="img/appstore.png" alt="" class="mr-2"></a>
+						<a href=""><img src="img/playstore.png" alt=""></a>
+					</div>-->
+					<div class="col-lg-8 text-center text-lg-right">
+						<ul class="footer-nav">
+							<li><a href="">DPA</a></li>
+							<li><a href="">Terms of Use</a></li>
+							<li><a href="">Privacy Policy </a></li>
+							<li><a href="">support@company.com</a></li>
+							<li><a href="">(123) 456-7890</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

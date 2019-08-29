@@ -22,6 +22,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', v.index),
+    url(r'^compile$', v.compile,  name='compile' ),
+    # url(r'^$', 'compile', name='compile'),
     
 ]
 
