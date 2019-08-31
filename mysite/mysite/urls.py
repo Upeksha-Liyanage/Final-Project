@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^$', v.index),
     url(r'^compile$', v.compile,  name='compile' ),
     # url(r'^$', 'compile', name='compile'),
-    
+    # url(r'^folder$', v.folder,  name='folder' ),
 ]
 
 
