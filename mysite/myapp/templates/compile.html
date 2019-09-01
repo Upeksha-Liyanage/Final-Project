@@ -1,0 +1,42 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <title>Compile</title>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Percentage'],
+          ['Compiling',     20],
+          ['Not compiling',      4]
+          
+        ]);
+
+        var options = {
+          title: 'Compiling Process',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+  </head>
+
+
+  <body>  
+
+  <div id="donutchart" style="width: 900px; height: 500px;"></div>
+  
+  <div class="col-md-6">
+    <button type="button" class="btn btn-secondary btn-lg">Test</button>
+    </div> 
+
+</body>
+</html>

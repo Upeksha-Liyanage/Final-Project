@@ -17,12 +17,16 @@ from django.conf.urls import url
 from django.contrib import admin
 from myapp import views as v
 
+
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', v.index),
-    
+    url(r'^network$', v.network, name='network'),
+    url(r'^compile$', v.compile, name='compile'),
+   
+  	
 ]
 
 
