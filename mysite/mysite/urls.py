@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', v.index),
     url(r'^network$', v.network, name='network'),
-    url(r'^compile$', v.compile, name='compile'),
+    url(r'^graph$', v.graph, name='graph'),
    
   	
 ]

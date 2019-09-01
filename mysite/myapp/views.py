@@ -12,6 +12,6 @@ def network(request):
 	return render_to_response('network.html')
 
 def compile(request):
-    return render_to_response('compile.html')
+    return render_to_response('graph.html')
 
 
