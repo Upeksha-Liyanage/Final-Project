@@ -27,6 +27,10 @@ urlpatterns = [
     url(r'^graph$', v.configure, name='graph'),
    
   	
+    url(r'^compile$', v.compile,  name='compile' ),
+    # url(r'^$', 'compile', name='compile'),
+    # url(r'^folder$', v.folder,  name='folder' ),
+    url(r'^bbtn$', v.browse_button(),  name='bbtn' ),
 ]
 
 
