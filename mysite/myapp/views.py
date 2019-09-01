@@ -11,7 +11,7 @@ def index(request):
 def network(request):
 	return render_to_response('network.html')
 
-def compile(request):
+def configure(request):
     return render_to_response('graph.html')
 
 
