@@ -16,8 +16,6 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from myapp import views as v
-
-
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
@@ -25,12 +23,8 @@ urlpatterns = [
     url(r'^$', v.index),
     url(r'^network$', v.network, name='network'),
     url(r'^graph$', v.configure, name='graph'),
-   
-  	
-    url(r'^compile$', v.compile,  name='compile' ),
-    # url(r'^$', 'compile', name='compile'),
-    # url(r'^folder$', v.folder,  name='folder' ),
-    # url(r'^bbtn$', v.browse_button(),  name='bbtn' ),
+    url(r'^compile$', v.compile, name='compile' ),
+    
 ]
 
 
