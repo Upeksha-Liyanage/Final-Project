@@ -41,9 +41,9 @@
 			<nav class="main-menu">
 				<ul class="menu-list">
           <!--<li><a href="">News</a></li>-->
-          <li><a href="">Home</a></li>
-					<li><a href="">Compile</a></li>
-					<li><a href="">Configure</a></li>
+          <li><a href="{% url 'index' %}">Home</a></li>
+					<li><a href="{% url 'compile' %}">Compile</a></li>
+					<li><a href="{% url 'graph' %}">Configure</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -56,21 +56,30 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 hero-text">
-					<h4>Lets <span>Find Shortest Path</h4>
+					<h4>Lets <span>Find the Shortest Path and Network Failures</h4>
 					
 					<table class="hero-subscribe-from">
 							<form class="hero-subscribe-from">
 								<tr>
+									<th><input type="text" placeholder="Find the Shortest Path"></th>
+									<td><button type="file" class="site-btn sb-gradients">Find the Shortest Path</button></td>
 									
-									<th><button type="button" class="btn btn-primary">Find</button></th>
+								</tr>
+					
 									
+								<tr>
+									<th><input type="text" placeholder="Find the Network Errors"></th>
+									<td><button type="file" class="site-btn sb-gradients">Find the Network Failures !!!</button></td>
+									
+								</tr>
+									<th><button type="file" class="site-btn sb-gradients">Correct the Network Failures !!!</button></th>
+								<tr>
+
 								</tr>
 							</form>
 						</table>
 				</div>
-				<!--<div class="col-md-6">
-					<img src="img/laptop.png" class="laptop-image" alt="">
-				</div>-->
+				
 			</div>
 		</div>
 	</section>
