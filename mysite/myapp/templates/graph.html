@@ -1,36 +1,12 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Graph</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="A clustered low delay compilation system">
-    <meta name="keywords" content="cryptocurrency, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Percentage'],
-          ['Compiling',     20],
-          ['Not compiling',      4]
-          
-        ]);
-
-        var options = {
-          title: 'Compiling Process',
-          pieHole: 0.4,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-        chart.draw(data, options);
-      }
-    </script>
-	
+	<title>Process</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="A clustered low delay compilation system">
+	<meta name="keywords" content="cryptocurrency, unica, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Favicon -->
 	<link href="{% static 'img/favicon.ico' %}" rel="shortcut icon"/>
 
@@ -59,23 +35,65 @@
 	<header class="header-section clearfix">
 		<div class="container-fluid">
 			<a href="{% static 'index.html' %}" class="site-logo">
-			
+				<img src="static/img/eye.jpg" alt=""height="100" width="100"venv>
 			</a>
 			<div class="responsive-bar"><i class="fa fa-bars"></i></div>
 			<nav class="main-menu">
 				<ul class="menu-list">
           <!--<li><a href="">News</a></li>-->
-          <li><a href="">Home</a></li>
-					<li><a href="">Compile</a></li>
-					<li><a href="">Find</a></li>
+          <li><a href="{% url 'index' %}">Home</a></li>
+					<li><a href="{% url 'compile' %}">Compile</a></li>
+					<li><a href="{% url 'network' %}">Find</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 	<!-- Header section end -->
 
-  <div id="donutchart" style="width: 900px; height: 500px;"></div>
 
+	<!-- Hero section -->
+	<section class="hero-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 hero-text">
+					<h4>Lets <span>Configure</h4>
+					
+					<table class="hero-subscribe-from">
+							<form class="hero-subscribe-from">
+								<tr>
+									<th><input type="text" placeholder="Machine 1" aria-disabled="false"></th>
+									<td><div class="progress" style="width: 60px; margin:10px">
+										<div id="dynamic" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+										  <span id="current-progress"></span>
+										</div>
+									  </div></td>
+									  <script>
+									  $(function() {
+										var current_progress = 0;
+										var interval = setInterval(function() {
+											current_progress += 10;
+											$("#dynamic")
+											.css("width", current_progress + "%")
+											.attr("aria-valuenow", current_progress)
+											.text(current_progress + "% Complete");
+											if (current_progress >= 100)
+												clearInterval(interval);
+										}, 1000);
+									  });
+									</script>
+									
+								</tr>
+					
+									
+								
+							</form>
+						</table>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- Hero section end -->
 
 	
 
@@ -84,3 +102,6 @@
 	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
 	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
 	<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+

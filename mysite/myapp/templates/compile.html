@@ -65,36 +65,23 @@
 						<form class="hero-subscribe-from">
 							<tr>
 								<!-- <th><input  type="text" placeholder="Select file to compile" disabled></th> -->
-								<td>	<form action="{{ request.build_absolute_uri }}upload/" method="POST" enctype="multipart/form-data">
+								<th>	<form action="{{ request.build_absolute_uri }}upload/" method="POST" enctype="multipart/form-data">
 									{% csrf_token %}
-									<input type="file" name="file" class=""/>
-									<br />
-									
+									<input type="file" class="site-btn sb-gradients" name="file" class="">
+																		
 								  </form>
-								</td>
+								</th> 
+								<td><input id="noofpc" type="number"placeholder="Number of PCs to run compiler" min=1 max=10></td>
 							</tr>
 
-							<tr>
-									<th><input type="text" placeholder="Select number of machines" disabled ></th>
-									<th><input id="noofpc" type="number" placeholder="Number of PCs to run compiler	" min=1 max=50></th>
-							</tr>
-							<tr>
-									
-								<th><button type="file" class="site-btn sb-gradients" >Insert IP Address</button></th>
-							</tr>
+							
+							<tbody id="tbody"></tbody>
 						</form>	
+						
 						</table>
 
-						<table>
-							<thead>
-							  <tr>
-								<th><input type="text" placeholder="Enter the IP Address" ></th>
-								<th><button type="file" class="site-btn sb-gradients">Test</button></th>
-							  </tr>
-							</thead>
-							<tbody id="tbody"></tbody>
-						  </table>
-						  
+						
+						
 						  <script>
 							let inp = document.getElementById("noofpc");
 							document.getElementById("tbody").innerHTML = GenerateTable(inp.value);
@@ -107,9 +94,9 @@
 							  for (let i = 0; i < count; i++) {
 								result += `<tr>
 									  <td>
-										  <input type="text" value="" placeholder="TextBox    " />
+										  <input type="text" value="" placeholder="IP Address    " />
 									  </td>
-									  <td style="text-align: center"><button>Button</button></td>
+									  <td style="text-align:center""><button type="file" class="site-btn sb-gradients" name="file">Check</button></td>
 								  </tr>
 								  `;
 							  }
